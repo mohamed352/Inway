@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1075882018835",
+    "firebase_url": "https://inway-4539f-default-rtdb.firebaseio.com",
+    "project_id": "inway-4539f",
+    "storage_bucket": "inway-4539f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075882018835:android:5666c83457b8c96fc0d7e6",
+        "android_client_info": {
+          "package_name": "com.example.inway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075882018835-0a8j23adqr12rk9b6891emidnfrku11n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inway",
+            "certificate_hash": "6b57bc253e9f83a41e1093697b97e1ab18d59d8f"
+          }
+        },
+        {
+          "client_id": "1075882018835-osnm851rt64clqrv1nujicp4nmbjij1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD-uNTkoMzPMffHcrg7H8Vv_Q_s5yKs_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075882018835-osnm851rt64clqrv1nujicp4nmbjij1o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075882018835-q601dcd6t7e6ehu0bv70sol06letlhn4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.inway"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
