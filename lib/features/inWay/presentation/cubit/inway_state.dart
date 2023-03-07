@@ -14,3 +14,5 @@ class GetUserDateError extends InwayState {}
 class ChangeIndex extends InwayState {}
 class GetMyLocationLoading  extends InwayState {}
 class GetMyLocationDone extends InwayState {}
+class ChangeColorActivity extends InwayState {}
+

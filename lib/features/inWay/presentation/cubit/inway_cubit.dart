@@ -26,6 +26,25 @@ class InwayCubit extends Cubit<InwayState> {
     curentpage = activepage;
   }
 
+  
+  List<String> activityColor = ['All'];
+
+  void changeColorActivity(
+      {required String text,
+      required String retext1,
+      required String retext2}) {
+    emit(InwayInitial());
+    if (activityColor.contains(text)) {
+      activityColor.clear();
+    } else {
+      activityColor.add(text);
+      activityColor.remove(retext1);
+      activityColor.remove(retext2);
+    }
+
+    emit(ChangeColorActivity());
+  }
+
   int index = 0;
   void changeIndex(inDex) {
     emit(InwayInitial());

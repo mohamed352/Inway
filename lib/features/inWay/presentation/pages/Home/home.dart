@@ -5,7 +5,7 @@ import 'package:inway/features/inWay/presentation/cubit/inway_cubit.dart';
 import 'package:inway/features/inWay/presentation/widgets/loading.dart';
 
 class Home extends StatelessWidget {
-  Home({super.key});
+const  Home({super.key});
 
   @override
   Widget build(BuildContext context) {

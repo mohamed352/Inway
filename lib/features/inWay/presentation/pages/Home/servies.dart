@@ -15,45 +15,40 @@ class Serives extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         // var cubit = InwayCubit.get(context);
-        return SafeArea(
-          child: Scaffold(
-              backgroundColor: Colors.white,
-              body:
-               Padding(
-                padding: const EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+        return Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Text(
+                  'Services',
+                  style: MyTextStyle.styleBold.copyWith(fontSize: 35),
+                ),
+              ),
+              Text(
+                'Go anywhere,get anything',
+                style: MyTextStyle.meduimBold,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
-                      child: Text(
-                        'Services',
-                        style: MyTextStyle.styleBold.copyWith(fontSize: 35),
-                      ),
+                    const ItemForImage(
+                        text: 'Ride', image: AppImagesAssets.car),
+                    SizedBox(
+                      width: AppSizes.getWidth(context, 15),
                     ),
-                    Text(
-                      'Go anywhere,get anything',
-                      style: MyTextStyle.meduimBold,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: Row(
-                        children: [
-                          const ItemForImage(
-                              text: 'Ride', image: AppImagesAssets.car),
-                          SizedBox(
-                            width: AppSizes.getWidth(context, 15),
-                          ),
-                          const ItemForImage(
-                            text: 'Travel',
-                            image: AppImagesAssets.bag,
-                          )
-                        ],
-                      ),
-                    ),
+                    const ItemForImage(
+                      text: 'Travel',
+                      image: AppImagesAssets.bag,
+                    )
                   ],
                 ),
-              )),
+              ),
+            ],
+          ),
         );
       },
     );
