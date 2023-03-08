@@ -7,6 +7,7 @@ import 'package:inway/features/inWay/presentation/constants/textstyle_manger.dar
 import 'package:inway/features/inWay/presentation/cubit/inway_cubit.dart';
 import 'package:inway/features/inWay/presentation/pages/setting/setting.dart';
 import 'package:inway/features/inWay/presentation/widgets/divider.dart';
+import 'package:inway/features/inWay/presentation/widgets/itembar.dart';
 
 class Account extends StatelessWidget {
   const Account({super.key});
@@ -90,18 +91,21 @@ class Account extends StatelessWidget {
               ItemBar(
                 function: () {},
                 iconData: Icons.email,
+                showDivider: true,
                 text: 'Messages',
               ),
               ItemBar(
                   iconData: Icons.settings,
                   text: 'Settings',
+                  showDivider: true,
                   function: () {
-                    navigatioonalign(SettingScreen(), context);
+                    navigatioonalign(const SettingScreen(), context);
                   }),
               ItemBar(
                 function: () {},
                 iconData: Icons.info,
                 text: 'Legal',
+                showDivider: true,
               ),
             ],
           ),
@@ -141,42 +145,6 @@ class Item extends StatelessWidget {
             style: MyTextStyle.meduimBold,
           )
         ],
-      ),
-    );
-  }
-}
-
-class ItemBar extends StatelessWidget {
-  final IconData iconData;
-  final String text;
-  final Function function;
-  const ItemBar(
-      {super.key,
-      required this.iconData,
-      required this.text,
-      required this.function});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        function();
-      },
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        margin: const EdgeInsets.only(bottom: 10),
-        child: Row(
-          children: [
-            Icon(iconData),
-            SizedBox(
-              width: AppSizes.getWidth(context, 20),
-            ),
-            Text(
-              text,
-              style: MyTextStyle.meduimBold,
-            )
-          ],
-        ),
       ),
     );
   }

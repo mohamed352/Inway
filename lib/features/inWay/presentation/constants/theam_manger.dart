@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:inway/features/inWay/presentation/constants/color_manger.dart';
 
 ThemeData lightTheme = ThemeData(
+  scaffoldBackgroundColor:  Colors.white,
     textTheme: GoogleFonts.alexandriaTextTheme(ThemeData.light().textTheme),
     iconTheme: const IconThemeData(
       color: Colors.black,
