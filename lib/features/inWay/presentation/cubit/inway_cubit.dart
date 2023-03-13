@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:inway/cashe_helper.dart';
 import 'package:inway/config/endpoint.dart';
 import 'package:inway/features/inWay/data/models/userdate.dart';
@@ -15,6 +16,8 @@ import 'package:inway/features/inWay/presentation/pages/Home/activity.dart';
 import 'package:inway/features/inWay/presentation/pages/Home/homescreen.dart';
 import 'package:inway/features/inWay/presentation/pages/Home/servies.dart';
 import 'package:inway/features/inWay/utils/utils.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:permission_handler/permission_handler.dart';
 
 part 'inway_state.dart';
 
@@ -23,6 +26,7 @@ class InwayCubit extends Cubit<InwayState> {
   static InwayCubit get(context) => BlocProvider.of(context);
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+  final firebasestorage = firebase_storage.FirebaseStorage.instance;
   int curentpage = 0;
   void changeindactor(int activepage) {
     emit(InwayInitial());
@@ -135,6 +139,53 @@ class InwayCubit extends Cubit<InwayState> {
       //emit(GetMyLocationDone());
     } catch (e) {
       showMySnackBar(context: context, content: e.toString());
+    }
+  }
+
+  var pick = ImagePicker();
+  File? profileImage;
+  Future<void> pickProfileImage(context) async {
+    var status = await Permission.storage.request();
+    if (status.isGranted) {
+      final pickProfile = await pick.pickImage(source: ImageSource.gallery);
+      if (pickProfile != null) {
+        profileImage = File(pickProfile.path);
+        emit(PickProfileImage());
+      } else {
+        showMySnackBar(context: context, content: 'No Image Selected');
+      }
+    } else {
+      showMySnackBar(
+          context: context, content: 'app not get permission', isError: true);
+    }
+  }
+
+  Future<void> uploadImageProfile(context) async {
+    emit(UploadProfileImageLoading());
+    try {
+      if (profileImage != null) {
+        var ref = await firebasestorage
+            .ref()
+            .child('users/${Uri.file(profileImage!.path).pathSegments.last}')
+            .putFile(profileImage!);
+        var imageUrl = await ref.ref.getDownloadURL();
+        firebaseFirestore
+            .collection('users')
+            .doc(uid)
+            .update({'image': imageUrl});
+            profileImage=null;
+
+        emit(UploadProfileImageDone());
+      } else {
+        showMySnackBar(
+            context: context,
+            content: 'Please Select Image Frist',
+            isError: true);
+      }
+    } on firebase_storage.FirebaseException catch (e) {
+      emit(UploadProfileImageError());
+      showMySnackBar(
+          context: context, content: e.message.toString(), isError: true);
     }
   }
 }

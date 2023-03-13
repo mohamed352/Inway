@@ -98,72 +98,75 @@ class RowProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        slideRightNaviget(const EditProfile(), context);
+        slideRightNaviget(EditProfile(), context);
       },
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            radius: 45,
-            backgroundImage: NetworkImage('${model?.image}'),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          SizedBox(
-            width: AppSizes.getWidth(context, 144),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (model?.phone != null)
-                  Text(
-                    '${model?.phone}',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(fontSize: 14),
-                  ),
-                if (model?.email != null)
-                  Text(
-                    '${model?.email}',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(fontSize: 14),
-                  ),
-              ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 5),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 45,
+              backgroundImage: NetworkImage('${model?.image}'),
             ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(bottom: 25),
-            width: AppSizes.getWidth(context, 100),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10, right: 15),
-                  child: Text(
-                    '${model?.name}',
-                    maxLines: 1,
-                    overflow: TextOverflow.clip,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: Colors.black),
-                  ),
-                ),
-                const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 20,
-                ),
-              ],
+            const SizedBox(
+              width: 10,
             ),
-          ),
-        ],
+            SizedBox(
+              width: AppSizes.getWidth(context, 144),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (model?.phone != null)
+                    Text(
+                      '${model?.phone}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall!
+                          .copyWith(fontSize: 14),
+                    ),
+                  if (model?.email != null)
+                    Text(
+                      '${model?.email}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall!
+                          .copyWith(fontSize: 14),
+                    ),
+                ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(bottom: 25),
+              width: AppSizes.getWidth(context, 100),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10, right: 15),
+                    child: Text(
+                      '${model?.name}',
+                      maxLines: 1,
+                      overflow: TextOverflow.clip,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodySmall!
+                          .copyWith(color: Colors.black),
+                    ),
+                  ),
+                  const Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    size: 20,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

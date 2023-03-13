@@ -23,7 +23,7 @@ class _EmailVerfifcationState extends State<EmailVerfifcation> {
     
     super.initState();
     Timer(const Duration(seconds: 5),
-        () => navigetandfinsih( Home(), context));
+        () => navigetandfinsih( const Home(), context));
   }
   @override
   Widget build(BuildContext context) {

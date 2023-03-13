@@ -12,6 +12,9 @@ class AppSizes {
   static dynamic meduimsize(context) {
     return Size(width(context) * 0.5, height(context) * 0.07);
   }
+  static dynamic customsize(heigt,widh,context) {
+    return Size(width(context) * heigt, height(context) * widh);
+  }
 
   static dynamic fullsize(context) {
     return Size(width(context), height(context) * 0.075);

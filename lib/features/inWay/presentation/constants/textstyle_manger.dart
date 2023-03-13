@@ -9,10 +9,15 @@ class MyTextStyle {
 
   static TextStyle animationstyle = const TextStyle(
       color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold);
+  static TextStyle bigCapiton =const TextStyle(
+    color: Colors.grey,
+    fontSize: 17,
+  );
 
   static TextStyle textbutton = TextStyle(color: ColorApp.lightblue);
   static TextStyle meduimBold =
       const TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
-      static TextStyle modelbottomsheet =const TextStyle(fontSize: 22,);
-
+  static TextStyle modelbottomsheet = const TextStyle(
+    fontSize: 22,
+  );
 }

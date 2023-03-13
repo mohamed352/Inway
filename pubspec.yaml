@@ -30,6 +30,8 @@ dependencies:
   pinput: ^2.2.21
   google_maps_flutter: ^2.2.4
   geolocator: ^9.0.2
+  image_picker: ^0.8.7
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:
