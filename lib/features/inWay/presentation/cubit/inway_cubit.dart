@@ -173,7 +173,7 @@ class InwayCubit extends Cubit<InwayState> {
             .collection('users')
             .doc(uid)
             .update({'image': imageUrl});
-            profileImage=null;
+        profileImage = null;
 
         emit(UploadProfileImageDone());
       } else {
@@ -186,6 +186,28 @@ class InwayCubit extends Cubit<InwayState> {
       emit(UploadProfileImageError());
       showMySnackBar(
           context: context, content: e.message.toString(), isError: true);
+    }
+  }
+
+  Future<void> udateProfile({
+    required BuildContext context,
+    String? name,
+    String? email,
+    String? phone,
+    dynamic birthdate,
+  }) async {
+    emit(EditProfileLoading());
+    try {
+      firebaseFirestore.collection('users').doc(uid).update({
+        if (phone != '' && phone != null) 'phone': phone,
+        if (name != '' && name != null) 'name': name,
+        if (email != '' && email != null) 'email': email,
+         if (birthdate != '' && birthdate != null) 'birthdate': birthdate,
+
+      });
+    } on FirebaseException catch (e) {
+      showMySnackBar(context: context, content: e.message.toString());
+      emit(EditProfileError());
     }
   }
 }

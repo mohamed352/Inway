@@ -26,6 +26,11 @@ class UploadProfileImageLoading extends InwayState {}
 class UploadProfileImageDone extends InwayState {}
 
 class UploadProfileImageError extends InwayState {}
+class EditProfileLoading extends InwayState {}
+
+class EditProfileDone extends InwayState {}
+
+class EditProfileError extends InwayState {}
 
 class GetUserDateError extends InwayState {}
 

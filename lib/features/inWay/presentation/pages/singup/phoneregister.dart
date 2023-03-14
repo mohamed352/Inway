@@ -53,27 +53,8 @@ class PhoneAuth extends StatelessWidget {
                                   cubit.phoneDone(phonecontroller.text, value);
                                 }
                               },
-                              perfixicon: Container(
-                                padding: const EdgeInsets.all(8),
-                                child: InkWell(
-                                    onTap: () {
-                                      showCountryPicker(
-                                        context: context,
-                                        countryListTheme: CountryListThemeData(
-                                            bottomSheetHeight:
-                                                AppSizes.height(context) * 0.6),
-                                        onSelect: (value) {
-                                          cubit.selectcountry(value);
-                                        },
-                                      );
-                                    },
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(3),
-                                      child: Text(
-                                          '${cubit.country.flagEmoji} + ${cubit.country.phoneCode}',
-                                          style: MyTextStyle.meduimBold),
-                                    )),
-                              ),
+                              perfixicon: PerifxIconForPhone(cubit: cubit),
+                              
                               suifxicon: phonecontroller.text.length > 10
                                   ? CircleAvatar(
                                       backgroundColor: ColorApp.lightblue,
@@ -110,6 +91,41 @@ class PhoneAuth extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+class PerifxIconForPhone extends StatelessWidget {
+  const PerifxIconForPhone({
+    super.key,
+    required this.cubit,
+  });
+
+  final RegisterCubit cubit;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      child: InkWell(
+          onTap: () {
+            showCountryPicker(
+              context: context,
+              countryListTheme: CountryListThemeData(
+                  bottomSheetHeight:
+                      AppSizes.height(context) * 0.6),
+              onSelect: (value) {
+                cubit.selectcountry(value);
+              },
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(3),
+            child:
+             Text(
+                '${cubit.country.flagEmoji} + ${cubit.country.phoneCode}',
+                style: MyTextStyle.meduimBold),
+          )),
     );
   }
 }

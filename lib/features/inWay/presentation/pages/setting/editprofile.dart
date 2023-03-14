@@ -5,8 +5,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:inway/features/inWay/data/models/userdate.dart';
+import 'package:inway/features/inWay/presentation/constants/navigation_manger.dart';
 import 'package:inway/features/inWay/presentation/constants/textstyle_manger.dart';
 import 'package:inway/features/inWay/presentation/cubit/inway_cubit.dart';
+import 'package:inway/features/inWay/presentation/pages/setting/editpage.dart';
+import 'package:inway/features/inWay/presentation/pages/singup/cubit/register_cubit.dart';
 import 'package:inway/features/inWay/presentation/widgets/divider.dart';
 import 'package:inway/features/inWay/presentation/widgets/fromattime.dart';
 import 'package:inway/features/inWay/presentation/widgets/mytextbutton.dart';
@@ -25,6 +28,7 @@ class EditProfile extends StatelessWidget {
     return BlocConsumer<InwayCubit, InwayState>(
       listener: (context, state) {},
       builder: (context, state) {
+        FocusNode focusNode = FocusNode();
         var cubit = InwayCubit.get(context);
         var model = cubit.userDate;
         File? profileimage = cubit.profileImage;
@@ -62,12 +66,11 @@ class EditProfile extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        if(state is UploadProfileImageLoading)
-                        const LinearProgressIndicator(
-                          color: Colors.black,
-                          backgroundColor: Colors.white,
-                          
-                        ),
+                        if (state is UploadProfileImageLoading)
+                          const LinearProgressIndicator(
+                            color: Colors.black,
+                            backgroundColor: Colors.white,
+                          ),
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 20, left: 10, bottom: 25),
@@ -109,7 +112,6 @@ class EditProfile extends StatelessWidget {
                                       color: Colors.black,
                                       onPressed: () {
                                         cubit.uploadImageProfile(context);
-                                        
                                       },
                                       size: AppSizes.customsize(
                                           0.14, 0.05, context)),
@@ -126,20 +128,48 @@ class EditProfile extends StatelessWidget {
                         EditProfileItem(
                           model: model,
                           capitonText: 'Frist name',
-                          function: () {},
+                          function: () {
+                            navigatioonalign(
+                                EditPage(
+                                  focusNode: focusNode,
+                                  controllerText: model!.name!,
+                                  text: 'Frist name',
+                                  textInputType: TextInputType.name,
+                                ),
+                                context);
+                          },
                           modelText: '${model?.name}',
                         ),
                         EditProfileItem(
                           model: model,
                           capitonText: 'birthDate',
-                          function: () {},
+                          function: () {
+                            navigatioonalign(
+                                EditPage(
+                                  focusNode: focusNode,
+                                  controllerText: model!.birthdate!,
+                                  text: 'birthDate',
+                                  textInputType: TextInputType.datetime,
+                                ),
+                                context);
+                          },
                           modelText: '${model?.birthdate}',
                         ),
                         if (model?.phone != null)
                           EditProfileItem(
                             model: model,
                             capitonText: 'Phone Number',
-                            function: () {},
+                            function: () {
+                              navigatioonalign(
+                                  EditPage(
+                                    focusNode: focusNode,
+                                    controllerText: model!.phone!,
+                                    text: 'Phone Number',
+                                    textInputType: TextInputType.phone,
+                                    isPhone: true,
+                                  ),
+                                  context);
+                            },
                             modelText: '${model?.phone}',
                             isEmail: false,
                             iconData: Icons.phone_android,
@@ -148,7 +178,16 @@ class EditProfile extends StatelessWidget {
                           EditProfileItem(
                             model: model,
                             capitonText: 'Email',
-                            function: () {},
+                            function: () {
+                              navigatioonalign(
+                                  EditPage(
+                                    focusNode: focusNode,
+                                    controllerText: model!.email!,
+                                    text: 'Email',
+                                    textInputType: TextInputType.emailAddress,
+                                  ),
+                                  context);
+                            },
                             modelText: '${model?.email}',
                             isEmail: true,
                           ),
@@ -248,6 +287,7 @@ class EditProfileItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = RegisterCubit.get(context);
     return InkWell(
       onTap: () {
         function();
@@ -269,13 +309,10 @@ class EditProfileItem extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (isEmail != null && isEmail == false)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: Icon(iconData),
-                    ),
                   Text(
-                    modelText,
+                    isEmail != null && isEmail == false
+                        ? '${cubit.country.flagEmoji} + ${cubit.country.phoneCode}$modelText'
+                        : modelText,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const Spacer(),
