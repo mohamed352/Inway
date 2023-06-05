@@ -65,10 +65,10 @@ class Account extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
                 child: Row(
-                  children: const [
+                  children: [
                     Item(
                       icon: Icons.support,
                       text: 'Help',

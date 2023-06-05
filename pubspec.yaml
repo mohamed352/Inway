@@ -32,13 +32,22 @@ dependencies:
   geolocator: ^9.0.2
   image_picker: ^0.8.7
   permission_handler: ^10.2.0
+  flutter_native_splash: ^2.3.1
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
-
+flutter_icons:
+ android: true
+ ios: true
+ remove_alpha_ios: true
+ image_path: "assets/images/logo.png" 
+flutter_native_splash:    
+  color: "#19191f"
+  image: assets/images/logo.png
 flutter:
   uses-material-design: true
 

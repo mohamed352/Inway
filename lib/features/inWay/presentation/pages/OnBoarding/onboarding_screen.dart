@@ -57,7 +57,7 @@ class OnBoarding extends StatelessWidget {
                 LiquidSwipe(
                   pages: pages,
                   slideIconWidget: cubit.curentpage == 2
-                      ? Column()
+                      ? const Column()
                       : const Icon(Icons.arrow_back_ios),
                   enableSideReveal: true,
                   liquidController: controller,

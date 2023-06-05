@@ -32,7 +32,7 @@ void main() async {
       if (FirebaseAuth.instance.currentUser!.emailVerified == false) {
         widget = const EmailVerfifcation();
       }
-      widget = Home();
+      widget = const Home();
     }
   } else {
     widget = OnBoarding();

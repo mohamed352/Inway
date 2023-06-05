@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:inway/features/inWay/presentation/constants/color_manger.dart';
 import 'package:inway/features/inWay/presentation/pages/singup/cubit/register_cubit.dart';
 import 'package:inway/features/inWay/presentation/pages/singup/phoneregister.dart';
 import 'package:inway/features/inWay/presentation/widgets/divider.dart';

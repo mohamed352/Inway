@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +11,6 @@ import 'package:inway/features/inWay/presentation/pages/setting/editpage.dart';
 import 'package:inway/features/inWay/presentation/pages/singup/cubit/register_cubit.dart';
 import 'package:inway/features/inWay/presentation/widgets/divider.dart';
 import 'package:inway/features/inWay/presentation/widgets/fromattime.dart';
-import 'package:inway/features/inWay/presentation/widgets/mytextbutton.dart';
 
 import '../../constants/sizes_manger.dart';
 import '../../widgets/elvatetdbutton.dart';

@@ -136,7 +136,7 @@ class LoginScreen extends StatelessWidget {
                                                 passwordcontroller.text.trim(),
                                             onSucess: () {
                                               CasheHelper.savedata('uid', uid);
-                                              slideLeftNaviget(Home(), context);
+                                              slideLeftNaviget(const Home(), context);
                                             });
                                       }
                                     }),

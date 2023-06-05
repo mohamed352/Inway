@@ -154,7 +154,7 @@ class Singup extends StatelessWidget {
                                                 CasheHelper.savedata(
                                                     'uid', uid);
                                                 slideRightNaviget(
-                                                     Home(), context);
+                                                     const Home(), context);
                                               });
                                         } else {
                                           cubit.cerateUserDateWithPhone(
@@ -166,7 +166,7 @@ class Singup extends StatelessWidget {
                                                 CasheHelper.savedata(
                                                     'uid', uid);
                                                 navigetandfinsih(
-                                                     Home(), context);
+                                                     const Home(), context);
                                               });
                                         }
                                       }
