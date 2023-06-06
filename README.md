@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/mohamed352/Inway/assets/48868363/1b41c9fa-5f47-40b6-89a5-61d425ac62ec" alt="splash" width="400">
+  <img src="https://github.com/mohamed352/Inway/assets/48868363/53256e77-9fff-4d0e-ac06-d3d45a8ac2e7" alt="splash" width="400">
 </div>
 
 
@@ -36,19 +36,26 @@ https://appetize.io/app/lxy4taye5c74sged6a4obomr54?device=pixel6&osVersion=12.0&
 ## Video
 https://drive.google.com/file/d/1LlRomLglmDzTMiLT8rLqrJO-vXvtLr_n/view
 ## Screenshots
-  <div class="image-grid">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/616036dc-13d9-403f-b002-aa07b66e143d" alt="singUp" style="width: 250px;">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/26d1f1d6-608b-48f2-94f4-8faafabf4ba2" alt="login" style="width: 250px;">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/76419955-2e09-4dfa-ab2b-a8f7a0e1a2a9" alt="home" style="width: 250px; ">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/dc61be1f-1f02-460a-a386-a1bc83393d05" alt="newpost" style="width: 250px; ">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/be9e021e-22a9-4e4e-84c8-41b5755496a4" alt="profile" style="width: 250px;">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/323fef35-952e-436a-8ae6-67bb9978d3a0" alt="intro" style="width: 250px;">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/3680b911-b2e5-4d24-a8cc-203c929f520d" alt="setting" style="width: 250px; ">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/b527a6b8-7a93-483e-ab37-00338364c646" alt="story" style="width: 250px; ">
-    <img src="https://github.com/mohamed352/Inway/assets/48868363/3e15810f-769e-488c-811f-85d10b6f58b9" alt="Comments" style="width:250px;">
-   
-  </div>
-</div>
+ | Intro                                          | SingUp                                  | Login                                             |
+| --------------------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
+|![Intro_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/40abf420-03b7-4b63-acc2-8fd39c3300dc) | ![Phone_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/672c0e39-7a27-4ab7-9f08-a35ec712bad1) |![Login_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/fae81956-f411-4328-b900-e8097f96013b) |
+
+| home                                           | map                                           | activity                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| ![home_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/8b376d82-41e5-4d8b-8ab8-5db91e18f78d) | ![map_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/9ca8c687-7758-49e9-9f45-890fb2fec025) |![Activiity_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/9f50c1e3-ed31-4582-af91-bf60dff72020)|
+
+| Profile                                     |  Setting                                |    edit                                                |
+| ------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- |
+|![Profile_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/81d5a5a1-f618-4cfa-9ef5-675e787edddd) |![Settings_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/08e2851f-f70b-4267-9ba0-8b7de4023c7a) |![Edit_samsung-galaxys20ultra-cosmicblack-portrait](https://github.com/mohamed352/Inway/assets/48868363/838c5ece-b009-4beb-a191-4ef1642d4cb0) |
+
+## Contact 
+  
+ If you have any questions or suggestions, feel free to reach out: 
+    
+ - Email: [mohamedmostafa5380@gmail.com](mailto:mohamedmostafa5380@gmail.com) 
+ - LinkedIn: [Send offer](https://www.linkedin.com/in/mohamed-mostafa-a88328190) 
+ - facebook: [Mohamed Mostafa](https://www.facebook.com/profile.php?id=100022707412139&mibextid=ZbWKwL)
+ - WahtsApp: [Send Messege](https://wa.me/01551022078/?text=Hello)
 
 
 
