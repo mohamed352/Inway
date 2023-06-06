@@ -13,7 +13,6 @@ Inway is an app inspired by Uber, designed to provide a similar ride-hailing exp
 - Cross platform
 - Google Maps
 - Location decatet
-- Share Stories
 - Phone Auth
 - Beutfull Animations
 - Login with Google and Facebook
