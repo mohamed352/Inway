@@ -32,7 +32,7 @@ flutter run
 - Google Maps
 - Animaitions
 ## Demo
-https://appetize.io/app/lxy4taye5c74sged6a4obomr54?device=pixel6&osVersion=12.0&scale=75
+https://appetize.io/app/avtzg4qosxa7s5labpbv327pt4?device=pixel7&osVersion=13.0&scale=75
 ## Video
 https://drive.google.com/file/d/1LlRomLglmDzTMiLT8rLqrJO-vXvtLr_n/view
 ## Screenshots
