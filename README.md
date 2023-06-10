@@ -33,7 +33,7 @@ flutter run
 ## Demo
 https://appetize.io/app/avtzg4qosxa7s5labpbv327pt4?device=pixel7&osVersion=13.0&scale=75
 ## Video
-https://drive.google.com/file/d/1LlRomLglmDzTMiLT8rLqrJO-vXvtLr_n/view
+https://drive.google.com/file/d/1LlRomLglmDzTMiLT8rLqrJO-vXvtLr_n/view?usp=sharing
 ## Screenshots
  | Intro                                          | SingUp                                  | Login                                             |
 | --------------------------------------------------- | ------------------------------------- | --------------------------------------------------------- |
